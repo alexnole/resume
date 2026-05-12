@@ -1,6 +1,7 @@
 ---
 import { basics } from '@/data/resume.json';
 import ContactLinks from '../ContactLinks.astro';
+import Paragraph from '../ui/Paragraph.astro';
 
 const { name, label, email, phone, url, profiles } = basics;
 const contact = { email, phone, url, profiles };
@@ -8,6 +9,6 @@ const contact = { email, phone, url, profiles };
 
 <header class="mx-auto mb-12 max-w-2xl">
   <h1 class="mb-2 text-3xl font-bold tracking-tight text-balance">{name}</h1>
-  <p class="mb-4 font-mono text-base leading-relaxed text-pretty">{label}</p>
+  <Paragraph class="mb-4 text-base">{label}</Paragraph>
   <ContactLinks {...contact} />
 </header>
