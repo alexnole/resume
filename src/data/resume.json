@@ -18,5 +18,59 @@
         "url": "https://linkedin.com/in/alexnole"
       }
     ]
-  }
+  },
+  "work": [
+    {
+      "name": "Develtrex",
+      "position": "Backend Developer (Internship)",
+      "url": "https://www.develtrex.com",
+      "startDate": "2023-02-10",
+      "endDate": "2023-10-31",
+      "summary": "Contributed to a distributed microservices platform supporting high-availability web and mobile applications.",
+      "highlights": [
+        "Architected Spring Boot microservices enabling independent deployment and horizontal scalability across distributed services.",
+        "Designed multi-database persistence with Spring Data JPA & MongoDB across MySQL, PostgreSQL, and MongoDB, supporting flexible data modeling per service.",
+        "Integrated Netflix OSS (Eureka, Zuul) to enable dynamic service discovery, load balancing, and centralized API gateway routing.",
+        "Configured Spring Cloud Config Server with fault-tolerance strategies, reducing configuration drift and improving system resilience.",
+        "Delivered production-ready RESTful APIs consumed by web and mobile clients within a cross-functional Agile team of 3–5 engineers."
+      ],
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "Netflix OSS",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "REST APIs",
+        "Agile"
+      ]
+    },
+    {
+      "name": "Geor Workspace",
+      "position": "Backend Developer (Internship)",
+      "url": "https://geor.app",
+      "startDate": "2023-03-01",
+      "endDate": "2023-07-03",
+      "summary": "Built backend services for a multitenant SaaS platform with real-time communication and full-stack integration.",
+      "highlights": [
+        "Built and maintained ASP.NET Core REST APIs serving web and mobile clients in a multitenant production environment.",
+        "Engineered a multitenant persistence layer with MongoDB and MySQL, enabling data isolation and scalability across multiple client organizations.",
+        "Delivered real-time chat between users and tenants by implementing WebSockets with ASP.NET Core SignalR, replacing polling and reducing server load.",
+        "Bridged backend and frontend by integrating ASP.NET Core services with an Angular application, owning the full request lifecycle.",
+        "Shipped features iteratively within a 3–5 person Agile team, contributing to sprint planning, code reviews, and daily stand-ups."
+      ],
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        "WebSockets",
+        "SignalR",
+        "MongoDB",
+        "MySQL",
+        "REST APIs",
+        "Angular",
+        "Agile"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,33 @@
+---
+import Paragraph from './ui/Paragraph.astro';
+
+interface Props {
+  startDate: string;
+  endDate?: string;
+}
+
+const { startDate, endDate } = Astro.props;
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString + 'T00:00:00');
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+  });
+}
+
+const startLabel = formatDate(startDate);
+const endLabel = endDate ? formatDate(endDate) : 'Present';
+---
+
+<Paragraph class="text-muted-foreground font-sans leading-none">
+  <time datetime={startDate}>{startLabel}</time>
+  <span aria-hidden>—</span>
+  {
+    endDate ? (
+      <time datetime={endDate}>{endLabel}</time>
+    ) : (
+      <span>{endLabel}</span>
+    )
+  }
+</Paragraph>
