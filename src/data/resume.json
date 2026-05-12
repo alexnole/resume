@@ -72,5 +72,30 @@
         "Agile"
       ]
     }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Privada del Norte",
+      "url": "https://www.upn.edu.pe",
+      "area": "Computer Systems Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2020-03-25"
+    },
+    {
+      "institution": "OpenBootcamp",
+      "url": "https://open-bootcamp.com",
+      "area": "MERN Stack and SQL",
+      "studyType": "Bootcamp",
+      "startDate": "2022-09-01",
+      "endDate": "2022-12-01"
+    },
+    {
+      "institution": "Platzi",
+      "url": "https://platzi.com",
+      "area": "Web Development",
+      "studyType": "Online Course",
+      "startDate": "2022-05-01",
+      "endDate": "2022-08-01"
+    }
   ]
 }

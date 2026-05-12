@@ -1,0 +1,23 @@
+---
+import { cn } from '@/lib/utils';
+import DateRange from './DateRange.astro';
+
+interface Props {
+  name: string;
+  startDate: string;
+  endDate?: string;
+  class?: string;
+}
+
+const { name, class: className, ...dates } = Astro.props;
+---
+
+<div
+  class={cn(
+    'flex flex-col-reverse gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-0',
+    className
+  )}
+>
+  <h3 class="text-secondary-foreground font-bold text-balance">{name}</h3>
+  <DateRange {...dates} />
+</div>

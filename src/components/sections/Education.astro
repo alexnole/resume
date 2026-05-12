@@ -1,0 +1,34 @@
+---
+import Organization from '../Organization.astro';
+import Role from '../Role.astro';
+import Section from '../ui/Section.astro';
+
+interface Props {
+  educations?: Array<{
+    institution: string;
+    area: string;
+    startDate: string;
+    endDate?: string;
+    url?: string;
+  }>;
+}
+
+const { educations = [] } = Astro.props;
+---
+
+{
+  educations.length > 0 && (
+    <Section title="Education">
+      {educations.map(({ institution, area, url, ...dates }) => (
+        <article>
+          <Role name={area} {...dates} />
+          <Organization
+            class="text-secondary-foreground/85"
+            name={institution}
+            {url}
+          />
+        </article>
+      ))}
+    </Section>
+  )
+}
