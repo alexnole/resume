@@ -1,0 +1,10 @@
+---
+import { basics } from '@/data/resume.json';
+import About from '../sections/About.astro';
+
+const { summary } = basics;
+---
+
+<main class="mx-auto max-w-2xl space-y-12">
+  <About {summary} />
+</main>

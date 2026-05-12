@@ -1,0 +1,12 @@
+---
+import Paragraph from '../ui/Paragraph.astro';
+import Section from '../ui/Section.astro';
+
+interface Props {
+  summary: string;
+}
+---
+
+<Section title="About" class="space-y-3">
+  <Paragraph>{Astro.props.summary}</Paragraph>
+</Section>

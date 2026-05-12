@@ -1,0 +1,13 @@
+---
+import { cn } from '@/lib/utils';
+
+interface Props {
+  class?: string;
+}
+---
+
+<p
+  class={cn('text-sm leading-relaxed text-pretty font-mono', Astro.props.class)}
+>
+  <slot />
+</p>
