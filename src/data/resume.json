@@ -24,6 +24,7 @@
       "name": "Develtrex",
       "position": "Backend Developer (Internship)",
       "url": "https://www.develtrex.com",
+      "location": "Remote",
       "startDate": "2023-02-10",
       "endDate": "2023-10-31",
       "summary": "Contributed to a distributed microservices platform supporting high-availability web and mobile applications.",
@@ -50,6 +51,7 @@
       "name": "Geor Workspace",
       "position": "Backend Developer (Internship)",
       "url": "https://geor.app",
+      "location": "Remote",
       "startDate": "2023-03-01",
       "endDate": "2023-07-03",
       "summary": "Built backend services for a multitenant SaaS platform with real-time communication and full-stack integration.",
@@ -77,14 +79,14 @@
     {
       "institution": "Universidad Privada del Norte",
       "url": "https://www.upn.edu.pe",
-      "area": "Computer Systems Engineering",
+      "area": "Bachelor's Degree in Computer Systems Engineering",
       "studyType": "Bachelor's Degree",
       "startDate": "2020-03-25"
     },
     {
       "institution": "OpenBootcamp",
       "url": "https://open-bootcamp.com",
-      "area": "MERN Stack and SQL",
+      "area": "Full Stack Development with MERN and SQL",
       "studyType": "Bootcamp",
       "startDate": "2022-09-01",
       "endDate": "2022-12-01"

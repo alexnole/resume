@@ -20,7 +20,7 @@ const startLabel = formatDate(startDate);
 const endLabel = endDate ? formatDate(endDate) : 'Present';
 ---
 
-<Paragraph class="text-muted-foreground font-sans leading-none">
+<Paragraph class="text-muted-foreground font-sans text-xs">
   <time datetime={startDate}>{startLabel}</time>
   <span aria-hidden>—</span>
   {

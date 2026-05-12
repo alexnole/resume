@@ -3,14 +3,20 @@ import { cn } from '@/lib/utils';
 
 interface Props {
   name: string;
+  location?: string;
   url?: string;
   class?: string;
 }
 
-const { name, url, class: className } = Astro.props;
+const { name, location, url, class: className } = Astro.props;
 ---
 
-<h4 class={cn('text-sm font-medium text-balance', className)}>
+<h4
+  class={cn(
+    'text-secondary-foreground text-sm font-medium text-balance',
+    className
+  )}
+>
   {
     url ? (
       <a
@@ -26,4 +32,6 @@ const { name, url, class: className } = Astro.props;
       name
     )
   }
+  {location && <span aria-hidden>|</span>}
+  {location}
 </h4>

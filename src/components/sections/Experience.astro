@@ -1,5 +1,6 @@
 ---
-import DateRange from '../DateRange.astro';
+import Organization from '../Organization.astro';
+import Role from '../Role.astro';
 import Badge from '../ui/Badge.astro';
 import Paragraph from '../ui/Paragraph.astro';
 import Section from '../ui/Section.astro';
@@ -9,7 +10,7 @@ interface Props {
     name: string;
     position: string;
     url?: string;
-    location?: string;
+    location: string;
     startDate: string;
     endDate?: string;
     summary?: string;
@@ -31,36 +32,17 @@ const { works = [] } = Astro.props;
             name,
             summary,
             location,
-            startDate,
-            endDate,
             url,
             highlights = [],
             skills = [],
+            ...dates
           }) => (
             <article>
-              <div class="mb-1 flex flex-col-reverse gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-0">
-                <h3 class="text-primary font-bold text-balance">{position}</h3>
-                <DateRange {startDate} {endDate} />
-              </div>
-              <h4 class="text-primary mb-3 text-sm font-medium text-balance">
-                {url ? (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${name} website`}
-                    class="inline-flex underline-offset-4 hover:underline active:translate-y-px"
-                  >
-                    {name}
-                  </a>
-                ) : (
-                  name
-                )}{' '}
-                | {location ? location : 'Remote'}
-              </h4>
+              <Role class="mb-1" name={position} {...dates} />
+              <Organization class="mb-3" {url} {name} {location} />
               {summary && <Paragraph class="mb-2">{summary}</Paragraph>}
               {highlights.length > 0 && (
-                <ul class="text-secondary-foreground/85 mb-4 list-inside list-disc font-mono text-sm leading-relaxed text-pretty">
+                <ul class="text-secondary-foreground/85 mb-4 list-inside list-disc font-mono text-sm text-pretty">
                   {highlights.map(highlight => (
                     <li>{highlight}</li>
                   ))}
