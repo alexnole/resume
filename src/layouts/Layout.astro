@@ -1,5 +1,7 @@
 ---
 import { Font } from 'astro:assets';
+
+import { basics } from '@/data/resume.json';
 import '@/styles/global.css';
 
 interface Props {
@@ -7,7 +9,8 @@ interface Props {
   description?: string;
 }
 
-const { title, description } = Astro.props;
+const { name, summary } = basics;
+const { title = name, description = summary } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +23,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class="flex min-h-full flex-col p-4 md:p-8 lg:p-12 xl:p-16 print:p-11">
+  <body class="flex min-h-full flex-col px-6 py-12 md:py-20">
     <slot />
   </body>
 </html>

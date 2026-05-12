@@ -38,7 +38,7 @@ const { works = [] } = Astro.props;
             skills = [],
           }) => (
             <article>
-              <div class="mb-1 flex flex-col-reverse sm:flex-row sm:items-baseline sm:justify-between">
+              <div class="mb-1 flex flex-col-reverse gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-0">
                 <h3 class="text-primary font-bold text-balance">{position}</h3>
                 <DateRange {startDate} {endDate} />
               </div>
@@ -58,11 +58,7 @@ const { works = [] } = Astro.props;
                 )}{' '}
                 | {location ? location : 'Remote'}
               </h4>
-              {summary && (
-                <Paragraph class="text-secondary-foreground/85 mb-2">
-                  {summary}
-                </Paragraph>
-              )}
+              {summary && <Paragraph class="mb-2">{summary}</Paragraph>}
               {highlights.length > 0 && (
                 <ul class="text-secondary-foreground/85 mb-4 list-inside list-disc font-mono text-sm leading-relaxed text-pretty">
                   {highlights.map(highlight => (

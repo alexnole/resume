@@ -7,7 +7,10 @@ interface Props {
 ---
 
 <p
-  class={cn('text-sm leading-relaxed text-pretty font-mono', Astro.props.class)}
+  class={cn(
+    'text-sm leading-relaxed text-pretty font-mono text-secondary-foreground/85',
+    Astro.props.class
+  )}
 >
   <slot />
 </p>
